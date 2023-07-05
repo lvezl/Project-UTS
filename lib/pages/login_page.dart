@@ -17,104 +17,99 @@ class _LoginPageState extends State<LoginPage> {
       backgroundColor: Color(0xffDDDADA),
       body: SafeArea(
         child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Icon(
-                Icons.free_breakfast_outlined,
-                size: 100,
-              ),
-              SizedBox(height: 10
-              ),
-              const Text(
-                'Hello',
-                style: TextStyle(fontWeight: FontWeight.w600, 
-                fontSize: 30
-              ),
+          child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+            Icon(
+              Icons.free_breakfast_outlined,
+              size: 100,
             ),
-              Text(
-                'Welcome!',
-                style: TextStyle(fontWeight: FontWeight.w500, 
-                fontSize: 26
-              ),
+            SizedBox(height: 10),
+            const Text(
+              'Hello',
+              style: TextStyle(fontWeight: FontWeight.w600, fontSize: 30),
             ),
-            SizedBox(height: 50
+            Text(
+              'Welcome!',
+              style: TextStyle(fontWeight: FontWeight.w500, fontSize: 26),
             ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                child: Container(
-                  decoration: BoxDecoration(
+            SizedBox(height: 50),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 25.0),
+              child: Container(
+                decoration: BoxDecoration(
                     color: Color(0xffDDDADA),
-                    border:  Border.all(color: Colors.white),
-                    borderRadius: BorderRadius.circular(12)
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.only(left: 20.0),
-                    child: TextField(
-                      decoration: InputDecoration(
-                        border: InputBorder.none,
-                        hintText: 'Email',
-                      ),
+                    border: Border.all(color: Colors.white),
+                    borderRadius: BorderRadius.circular(12)),
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 20.0),
+                  child: TextField(
+                    decoration: InputDecoration(
+                      border: InputBorder.none,
+                      hintText: 'Email',
                     ),
                   ),
                 ),
               ),
-              SizedBox(height: 10,
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                child: Container(
-                  decoration: BoxDecoration(
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 25.0),
+              child: Container(
+                decoration: BoxDecoration(
                     color: Color(0xffDDDADA),
-                    border:  Border.all(color: Colors.white),
-                    borderRadius: BorderRadius.circular(12)
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.only(left: 20.0),
-                    child: TextField(
-                      obscureText: true,
-                      decoration: InputDecoration(
-                        border: InputBorder.none,
-                        hintText: 'Password',
-                      ),
+                    border: Border.all(color: Colors.white),
+                    borderRadius: BorderRadius.circular(12)),
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 20.0),
+                  child: TextField(
+                    obscureText: true,
+                    decoration: InputDecoration(
+                      border: InputBorder.none,
+                      hintText: 'Password',
                     ),
                   ),
                 ),
               ),
-              SizedBox(height: 10),
-              GestureDetector(
+            ),
+            SizedBox(height: 10),
+            GestureDetector(
               onTap: () {
                 Navigator.of(context).pushReplacement(
                   MaterialPageRoute(
-                    builder: (context, ) => HomePage(
-                    ),
+                    builder: (
+                      context,
+                    ) =>
+                        HomePage(),
                   ),
                 );
               },
-               child: Padding(
+              child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
                 child: Container(
                   padding: EdgeInsets.all(20),
-                  decoration: BoxDecoration(color: Colors.blue,
-                  borderRadius: BorderRadius.circular(12)
-                  ),
+                  decoration: BoxDecoration(
+                      color: Colors.blue,
+                      borderRadius: BorderRadius.circular(12)),
                   child: Center(
-                    child: Text('Log In',
-                    style: TextStyle(color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
+                    child: Text(
+                      'Log In',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18,
+                      ),
                     ),
                   ),
                 ),
               ),
             ),
+            SizedBox(
+              height: 10,
             ),
-            SizedBox(height: 10,),
-          ]
-          ),
+          ]),
         ),
       ),
     );
   }
 }
-
