@@ -184,7 +184,7 @@ class _HomePageState extends State<HomePage> {
       children: [
         const Padding(
           padding: EdgeInsets.only(left: 20),
-          child: Text('Recommendation\nfor Breakfast',
+          child: Text('Recommendation\nfor Today',
               style: TextStyle(
                   color: Colors.black,
                   fontSize: 18,
@@ -271,7 +271,7 @@ class _HomePageState extends State<HomePage> {
         const Padding(
           padding: EdgeInsets.only(left: 20),
           child: Text(
-            'Recommendation\nfor Breakfast',
+            'Recommendation\nfor Today',
           ),
         ),
         const SizedBox(
@@ -305,9 +305,9 @@ class _HomePageState extends State<HomePage> {
                             ' | ' +
                             diets[index].calorie,
                         style: const TextStyle(
-                            color: Color(0xff7B6F72),
+                            color: Colors.white,
                             fontSize: 13,
-                            fontWeight: FontWeight.w400),
+                            fontWeight: FontWeight.w500),
                       ),
                       Container(
                         height: 45,
@@ -457,7 +457,7 @@ class _HomePageState extends State<HomePage> {
   AppBar appBar() {
     return AppBar(
       title: const Text(
-        'Breakfast Menu',
+        'Breakfast List',
         style: TextStyle(
             color: Colors.black, fontSize: 18, fontWeight: FontWeight.bold),
       ),
@@ -467,11 +467,6 @@ class _HomePageState extends State<HomePage> {
       leading: Container(
         margin: const EdgeInsets.all(10),
         alignment: Alignment.center,
-        child: SvgPicture.asset(
-          'assets/icons/Arrow - Left 2.svg',
-          height: 20,
-          width: 20,
-        ),
         decoration: BoxDecoration(
             color: Colors.white, borderRadius: BorderRadius.circular(10)),
       ),
@@ -482,11 +477,6 @@ class _HomePageState extends State<HomePage> {
             margin: const EdgeInsets.all(10),
             alignment: Alignment.center,
             width: 37,
-            child: SvgPicture.asset(
-              'assets/icons/dots.svg',
-              height: 5,
-              width: 5,
-            ),
             decoration: BoxDecoration(
                 color: Colors.white, borderRadius: BorderRadius.circular(10)),
           ),
