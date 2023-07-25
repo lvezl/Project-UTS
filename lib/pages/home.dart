@@ -8,6 +8,7 @@ import 'package:project_uts/models/category_model.dart';
 import 'package:project_uts/models/diet_model.dart';
 import 'package:project_uts/models/popular_model.dart';
 import 'package:project_uts/pages/login_page.dart';
+import 'package:http/http.dart' as http;
 
 class HomePage extends StatefulWidget {
   HomePage({super.key});
@@ -22,7 +23,17 @@ class _HomePageState extends State<HomePage> {
   List<DietModel> diets = [];
   List<PopularDietsModel> popularDiets = [];
 
-  void _getInitialInfo() {
+  void _getInitialInfo() async {
+    Map<String, String> headers = {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+    };
+
+    var response = await http.get(
+        Uri.parse('http://localhost:1337/api/recommendation-for-breakfast'),
+        headers: headers);
+
+    print(response.body);
     categories = CategoryModel.getCategories();
     diets = DietModel.getDiets();
     popularDiets = PopularDietsModel.getPopularDiets();
