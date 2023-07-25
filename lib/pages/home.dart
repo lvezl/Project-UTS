@@ -30,10 +30,11 @@ class _HomePageState extends State<HomePage> {
     };
 
     var response = await http.get(
-        Uri.parse('http://localhost:1337/api/recommendation-for-breakfast'),
+        Uri.parse('http://localhost:1337/api/recommendation-for-breakfasts'),
         headers: headers);
 
     print(response.body);
+
     categories = CategoryModel.getCategories();
     diets = DietModel.getDiets();
     popularDiets = PopularDietsModel.getPopularDiets();
